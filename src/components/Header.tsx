@@ -8,7 +8,6 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export const Header = ({ data }: { data: ResumeData }) => {
   const headerRef = useRef<HTMLElement>(null);
-  const nameRef = useRef<HTMLHeadingElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const systemTextRef = useRef<HTMLDivElement>(null);
@@ -40,15 +39,11 @@ export const Header = ({ data }: { data: ResumeData }) => {
     { scope: headerRef },
   );
 
-  // 名字打字机（容器 fade-in 后启动）
-  useTypewriter(nameRef, data.name, { speed: 55, cursor: false, delay: 0.5 });
-
-  // 职位 typewriter（名字打完后接续）
-  const nameDuration = (data.name.length * 55) / 1000;
+  // 职位 typewriter
   useTypewriter(titleRef, `${data.title} | 10 YEARS EXP`, {
     speed: 35,
     cursor: true,
-    delay: 0.5 + nameDuration + 0.2,
+    delay: 0.5,
   });
 
   // 联系信息 stagger reveal
@@ -83,17 +78,19 @@ export const Header = ({ data }: { data: ResumeData }) => {
         [ SYSTEM.LOG: QIN_JIAPENG_ACTIVE ]
       </div>
 
-      <h1
-        ref={nameRef}
-        className="text-neon-blue neon-glow text-4xl md:text-[3.5rem] mb-2 font-mono uppercase tracking-[2px] print:text-black print:drop-shadow-none print:font-bold print:text-3xl print:mb-1"
-      />
+      <h1 className="text-neon-blue neon-glow text-4xl md:text-[3.5rem] mb-2 font-mono uppercase tracking-[2px] print:text-black print:drop-shadow-none print:font-bold print:text-3xl print:mb-1">
+        {data.name}
+      </h1>
 
       <div
         ref={titleRef}
-        className="text-xl text-text-dim mb-8 print:text-gray-800 print:mb-2 print:text-lg"
+        className="text-xl text-text-dim mb-8 min-h-lh print:text-gray-800 print:mb-2 print:text-lg"
       />
 
-      <div ref={contactRef} className="flex flex-wrap justify-center gap-6 text-sm">
+      <div
+        ref={contactRef}
+        className="flex flex-wrap justify-center gap-6 text-sm"
+      >
         <span className="flex items-center gap-2 text-text-dim print:text-gray-700">
           <MapPin
             size={16}

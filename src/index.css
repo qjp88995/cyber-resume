@@ -40,7 +40,7 @@
 
   body::after {
     content: "";
-    @apply fixed left-0 top-0 w-full h-0.5 opacity-10 -z-10 bg-gradient-to-r from-transparent via-neon-blue to-transparent;
+    @apply fixed left-0 top-0 w-full h-0.5 opacity-10 -z-10 bg-linear-to-r from-transparent via-neon-blue to-transparent;
     animation: scan 8s linear infinite;
   }
 
@@ -115,8 +115,19 @@
     size: A4;
   }
 
+  /* Remap all theme color tokens to print-safe values.
+     Tailwind v4 utilities resolve via var(), so overriding the tokens here
+     is more reliable than fighting specificity with color:black !important. */
+  :root {
+    --color-neon-blue: #000000;
+    --color-neon-purple: #333333;
+    --color-text-main: #111111;
+    --color-text-dim: #444444;
+    --color-bg-dark: #ffffff;
+    --color-card-bg: transparent;
+  }
+
   * {
-    color: black !important;
     text-shadow: none !important;
     box-shadow: none !important;
     filter: none !important;
@@ -142,5 +153,19 @@
     max-width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
+  }
+
+  /* useHoverScan injects a beam div hidden via scaleX(0).
+     transform:none !important would reveal it, so explicitly hide it. */
+  [data-hover-beam] {
+    display: none !important;
+  }
+
+  /* Reset GSAP inline styles: elements frozen in initial state (opacity:0,
+     transform, filter) must be forced visible. !important overrides inline styles. */
+  * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
   }
 }

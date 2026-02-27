@@ -28,7 +28,7 @@ export const Experience = ({ data }: { data: ResumeData }) => {
           {data.workExperience.map((exp) => (
             <div key={exp.company} className="timeline-item relative mb-12 print:mb-8">
               {/* 节点圆点 */}
-              <div className="timeline-dot absolute -left-[1.625rem] top-0 w-3 h-3 bg-bg-dark border-2 border-neon-blue rounded-full shadow-neon-blue-dot print:border-gray-400 print:bg-white print:shadow-none" />
+              <div className="timeline-dot absolute -left-6.5 top-0 w-3 h-3 bg-bg-dark border-2 border-neon-blue rounded-full shadow-neon-blue-dot print:border-gray-400 print:bg-white print:shadow-none" />
               <div className="flex justify-between mb-4 flex-wrap gap-2 print:mb-2">
                 <div>
                   <h3 className="text-neon-blue neon-glow text-xl mb-1 print:text-black print:drop-shadow-none print:font-bold">

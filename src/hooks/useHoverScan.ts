@@ -16,6 +16,7 @@ export function useHoverScan(ref: RefObject<HTMLElement | null>): void {
       const container = ref.current;
 
       const beam = document.createElement("div");
+      beam.setAttribute("data-hover-beam", "");
       Object.assign(beam.style, {
         position: "absolute",
         inset: "0",

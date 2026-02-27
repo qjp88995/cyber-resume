@@ -21,15 +21,13 @@ export function useTimelineDraw(ref: RefObject<HTMLElement | null>): void {
       }
 
       const line = ref.current.querySelector<HTMLElement>(".timeline-line");
-      const dots =
-        ref.current.querySelectorAll<HTMLElement>(".timeline-dot");
-      const items =
-        ref.current.querySelectorAll<HTMLElement>(".timeline-item");
+      const dots = ref.current.querySelectorAll<HTMLElement>(".timeline-dot");
+      const items = ref.current.querySelectorAll<HTMLElement>(".timeline-item");
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ref.current,
-          start: "top 80%",
+          start: "top bottom",
           once: true,
         },
       });
@@ -53,7 +51,7 @@ export function useTimelineDraw(ref: RefObject<HTMLElement | null>): void {
             stagger: 0.15,
             ease: "back.out(1.7)",
           },
-          "-=0.4",
+          "<",
         );
       }
 
@@ -65,10 +63,10 @@ export function useTimelineDraw(ref: RefObject<HTMLElement | null>): void {
             y: 0,
             opacity: 1,
             duration: 0.5,
-            stagger: 0.08,
+            stagger: 0.1,
             ease: "expo.out",
           },
-          "-=0.3",
+          "<0.1",
         );
       }
     },
