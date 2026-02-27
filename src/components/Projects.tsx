@@ -85,28 +85,50 @@ export const Projects = ({ data }: { data: ResumeData }) => (
         </div>
 
         {(proj.url || proj.github) && (
-          <div className="mt-8 flex gap-4 print:mt-4">
-            {proj.github && (
-              <a
-                href={proj.github}
-                target="_blank"
-                rel="noreferrer"
-                className="text-neon-blue no-underline font-mono text-sm inline-flex items-center gap-2 border border-neon-blue px-4 py-2 transition-all duration-300 hover:bg-neon-blue hover:text-bg-dark hover:shadow-neon-blue-link print:text-gray-700 print:border-gray-300 print:py-1"
-              >
-                <ExternalLink size={16} /> GITHUB
-              </a>
-            )}
-            {proj.url && (
-              <a
-                href={proj.url}
-                target="_blank"
-                rel="noreferrer"
-                className="text-neon-blue no-underline font-mono text-sm inline-flex items-center gap-2 border border-neon-blue px-4 py-2 transition-all duration-300 hover:bg-neon-blue hover:text-bg-dark hover:shadow-neon-blue-link print:text-gray-700 print:border-gray-300 print:py-1"
-              >
-                <ExternalLink size={16} /> LIVE_DEMO
-              </a>
-            )}
-          </div>
+          <>
+            {/* 屏幕：霓虹风格按钮 */}
+            <div className="mt-8 flex gap-4 print:hidden">
+              {proj.github && (
+                <a
+                  href={proj.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-neon-blue no-underline font-mono text-sm inline-flex items-center gap-2 border border-neon-blue px-4 py-2 transition-all duration-300 hover:bg-neon-blue hover:text-bg-dark hover:shadow-neon-blue-link"
+                >
+                  <ExternalLink size={16} /> GITHUB
+                </a>
+              )}
+              {proj.url && (
+                <a
+                  href={proj.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-neon-blue no-underline font-mono text-sm inline-flex items-center gap-2 border border-neon-blue px-4 py-2 transition-all duration-300 hover:bg-neon-blue hover:text-bg-dark hover:shadow-neon-blue-link"
+                >
+                  <ExternalLink size={16} /> LIVE
+                </a>
+              )}
+            </div>
+            {/* 打印：文字链接 */}
+            <div className="hidden print:flex print:flex-wrap print:gap-x-6 print:gap-y-1 print:mt-2 print:text-xs print:text-gray-600">
+              {proj.github && (
+                <span>
+                  GitHub:{" "}
+                  <a href={proj.github} className="text-gray-800 underline">
+                    {proj.github}
+                  </a>
+                </span>
+              )}
+              {proj.url && (
+                <span>
+                  Link:{" "}
+                  <a href={proj.url} className="text-gray-800 underline">
+                    {proj.url}
+                  </a>
+                </span>
+              )}
+            </div>
+          </>
         )}
       </GlassCard>
     ))}
