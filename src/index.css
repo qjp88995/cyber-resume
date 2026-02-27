@@ -70,7 +70,7 @@
 @layer components {
   /* 赛博朋克风格卡片：背景、边框、四角装饰、悬停效果 */
   .neon-card {
-    @apply bg-card-bg backdrop-blur-md border border-neon-blue/10 rounded-1 relative overflow-hidden
+    @apply bg-card-bg backdrop-blur-md border border-neon-blue/10 rounded relative overflow-hidden
            transition-all duration-300
            hover:border-neon-blue hover:-translate-y-0.5;
     &:hover {
