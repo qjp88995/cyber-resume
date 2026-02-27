@@ -61,9 +61,6 @@ export function useScrollReveal(
           },
         },
       );
-
-      // Defensive cleanup: explicitly kill all ScrollTriggers
-      return () => ScrollTrigger.getAll().forEach((t) => t.kill());
     },
     { scope: ref, dependencies: [] }, // options 不加入 dependencies：动画只在组件挂载时初始化一次，这是故意的
   );
