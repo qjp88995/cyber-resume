@@ -2,13 +2,13 @@ import { useEffect } from 'react';
 
 import gsap from 'gsap';
 
-import { CoreModules } from './components/CoreModules';
-import { EducationAwards } from './components/EducationAwards';
-import { Experience } from './components/Experience';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { Projects } from './components/Projects';
-import { resumeData } from './data';
+import { CoreModules } from '@/components/CoreModules';
+import { EducationAwards } from '@/components/EducationAwards';
+import { Experience } from '@/components/Experience';
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
+import { Projects } from '@/components/Projects';
+import { resumeData } from '@/data';
 
 function App() {
   useEffect(() => {

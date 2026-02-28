@@ -2,9 +2,9 @@ import { useRef } from 'react';
 
 import { GraduationCap, Trophy } from 'lucide-react';
 
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import type { ResumeData } from '../types';
-import { GlassCard, SectionHeader } from './UI';
+import { GlassCard, SectionHeader } from '@/components/UI';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+import type { ResumeData } from '@/types';
 
 export const EducationAwards = ({ data }: { data: ResumeData }) => {
   const sectionRef = useRef<HTMLElement>(null);

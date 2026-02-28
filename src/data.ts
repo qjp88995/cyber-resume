@@ -1,4 +1,4 @@
-import type { ResumeData } from './types';
+import type { ResumeData } from '@/types';
 
 export const resumeData: ResumeData = {
   name: '秦嘉鹏 (Jiapeng Qin)',

@@ -2,10 +2,10 @@ import { useRef } from 'react';
 
 import { Briefcase } from 'lucide-react';
 
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import { useTimelineDraw } from '../hooks/useTimelineDraw';
-import type { ResumeData } from '../types';
-import { SectionHeader } from './UI';
+import { SectionHeader } from '@/components/UI';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useTimelineDraw } from '@/hooks/useTimelineDraw';
+import type { ResumeData } from '@/types';
 
 export const Experience = ({ data }: { data: ResumeData }) => {
   const headerRef = useRef<HTMLDivElement>(null);

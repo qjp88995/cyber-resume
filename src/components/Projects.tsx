@@ -1,7 +1,7 @@
 import { Cpu, ExternalLink, Layers, ShieldCheck } from 'lucide-react';
 
-import type { ResumeData } from '../types';
-import { GlassCard, SectionHeader } from './UI';
+import { GlassCard, SectionHeader } from '@/components/UI';
+import type { ResumeData } from '@/types';
 
 export const Projects = ({ data }: { data: ResumeData }) => (
   <section className="mb-16 print:mb-8">

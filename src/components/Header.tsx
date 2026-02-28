@@ -4,9 +4,9 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { Mail, MapPin, Phone, Printer } from 'lucide-react';
 
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import { useTypewriter } from '../hooks/useTypewriter';
-import type { ResumeData } from '../types';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { useTypewriter } from '@/hooks/useTypewriter';
+import type { ResumeData } from '@/types';
 
 export const Header = ({ data }: { data: ResumeData }) => {
   const headerRef = useRef<HTMLElement>(null);

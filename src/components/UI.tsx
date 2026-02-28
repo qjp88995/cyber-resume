@@ -1,6 +1,6 @@
 import { type ElementType, useRef } from 'react';
 
-import { useHoverScan } from '../hooks/useHoverScan';
+import { useHoverScan } from '@/hooks/useHoverScan';
 
 export const SectionHeader = ({
   icon: Icon,
