@@ -28,13 +28,14 @@ export default defineConfig([
     rules: {
       // 弃用 API 检测
       '@typescript-eslint/no-deprecated': 'error',
-      // 导入分组顺序：React → 三方库 → 相对路径 → 样式
+      // 导入分组顺序：React → 三方库 → @/ 内部路径 → 相对路径 → 样式
       'simple-import-sort/imports': [
         'error',
         {
           groups: [
             ['^react'],
             ['^@?\\w'],
+            ['^@/'],
             ['^\\.\\./|^\\./', '^\\./'],
             ['^.+\\.css$'],
           ],
