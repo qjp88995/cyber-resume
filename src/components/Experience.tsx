@@ -1,9 +1,11 @@
-import { useRef } from "react";
-import { Briefcase } from "lucide-react";
-import { SectionHeader } from "./UI";
-import type { ResumeData } from "../types";
-import { useTimelineDraw } from "../hooks/useTimelineDraw";
-import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useRef } from 'react';
+
+import { Briefcase } from 'lucide-react';
+
+import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useTimelineDraw } from '../hooks/useTimelineDraw';
+import type { ResumeData } from '../types';
+import { SectionHeader } from './UI';
 
 export const Experience = ({ data }: { data: ResumeData }) => {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -25,8 +27,11 @@ export const Experience = ({ data }: { data: ResumeData }) => {
         {/* 时间轴竖线 */}
         <div className="timeline-line absolute left-0 top-0 bottom-0 w-0.5 bg-neon-blue/10 print:hidden" />
         <div className="pl-6">
-          {data.workExperience.map((exp) => (
-            <div key={exp.company} className="timeline-item relative mb-12 print:mb-8">
+          {data.workExperience.map(exp => (
+            <div
+              key={exp.company}
+              className="timeline-item relative mb-12 print:mb-8"
+            >
               {/* 节点圆点 */}
               <div className="timeline-dot absolute -left-6.5 top-0 w-3 h-3 bg-bg-dark border-2 border-neon-blue rounded-full shadow-neon-blue-dot print:border-gray-400 print:bg-white print:shadow-none" />
               <div className="flex justify-between mb-4 flex-wrap gap-2 print:mb-2">

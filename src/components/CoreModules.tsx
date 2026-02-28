@@ -1,8 +1,10 @@
-import { useRef } from "react";
-import { Terminal, Code2 } from "lucide-react";
-import { SectionHeader, GlassCard } from "./UI";
-import type { ResumeData } from "../types";
-import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useRef } from 'react';
+
+import { Code2, Terminal } from 'lucide-react';
+
+import { useScrollReveal } from '../hooks/useScrollReveal';
+import type { ResumeData } from '../types';
+import { GlassCard, SectionHeader } from './UI';
 
 export const CoreModules = ({ data }: { data: ResumeData }) => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -14,7 +16,7 @@ export const CoreModules = ({ data }: { data: ResumeData }) => {
   });
 
   useScrollReveal(sectionRef, {
-    targets: ".gsap-card",
+    targets: '.gsap-card',
     stagger: 0.12,
     from: { y: 30, opacity: 0, scale: 0.97 },
   });
@@ -25,7 +27,7 @@ export const CoreModules = ({ data }: { data: ResumeData }) => {
         <SectionHeader icon={Terminal} title="Core Modules" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 print:gap-4 print:grid-cols-2">
-        {data.advantages.map((adv) => (
+        {data.advantages.map(adv => (
           <div key={adv} className="gsap-card">
             <GlassCard>
               <div className="flex gap-4 items-start">

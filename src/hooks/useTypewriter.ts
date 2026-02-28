@@ -1,6 +1,7 @@
-import { type RefObject } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import { type RefObject } from 'react';
+
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 interface TypewriterOptions {
   speed?: number; // ms per char, default 60
@@ -11,7 +12,7 @@ interface TypewriterOptions {
 export function useTypewriter(
   ref: RefObject<HTMLElement | null>,
   text: string,
-  options?: TypewriterOptions,
+  options?: TypewriterOptions
 ): void {
   const { speed = 60, cursor = true, delay = 0 } = options ?? {};
 
@@ -21,12 +22,12 @@ export function useTypewriter(
       if (!el) return;
 
       // Clear element content on every run to prevent stacking
-      el.textContent = "";
+      el.textContent = '';
 
       if (!text) return;
 
       // Respect prefers-reduced-motion
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         el.textContent = text;
         return;
       }
@@ -34,10 +35,10 @@ export function useTypewriter(
       let cursorEl: HTMLSpanElement | null = null;
 
       if (cursor) {
-        cursorEl = document.createElement("span");
-        cursorEl.textContent = "_";
+        cursorEl = document.createElement('span');
+        cursorEl.textContent = '_';
         cursorEl.style.cssText =
-          "color: inherit; margin-left: 2px; display: inline-block;";
+          'color: inherit; margin-left: 2px; display: inline-block;';
         el.appendChild(cursorEl);
 
         gsap.to(cursorEl, {
@@ -64,7 +65,7 @@ export function useTypewriter(
             }
           },
           undefined,
-          timeOffset,
+          timeOffset
         );
       }
 
@@ -78,10 +79,10 @@ export function useTypewriter(
             removalTarget.remove();
           },
           undefined,
-          totalDuration,
+          totalDuration
         );
       }
     },
-    { scope: ref, dependencies: [text] },
+    { scope: ref, dependencies: [text] }
   );
 }

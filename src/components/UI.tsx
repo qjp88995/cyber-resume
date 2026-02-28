@@ -1,5 +1,6 @@
-import { type ElementType, useRef } from "react";
-import { useHoverScan } from "../hooks/useHoverScan";
+import { type ElementType, useRef } from 'react';
+
+import { useHoverScan } from '../hooks/useHoverScan';
 
 export const SectionHeader = ({
   icon: Icon,
@@ -21,7 +22,7 @@ export const SectionHeader = ({
 
 export const GlassCard = ({
   children,
-  className = "",
+  className = '',
 }: {
   children: React.ReactNode;
   className?: string;

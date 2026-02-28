@@ -1,11 +1,12 @@
-import { Layers, Cpu, ShieldCheck, ExternalLink } from "lucide-react";
-import { SectionHeader, GlassCard } from "./UI";
-import type { ResumeData } from "../types";
+import { Cpu, ExternalLink, Layers, ShieldCheck } from 'lucide-react';
+
+import type { ResumeData } from '../types';
+import { GlassCard, SectionHeader } from './UI';
 
 export const Projects = ({ data }: { data: ResumeData }) => (
   <section className="mb-16 print:mb-8">
     <SectionHeader icon={Layers} title="Project Repositories" />
-    {data.projects.map((proj) => (
+    {data.projects.map(proj => (
       <GlassCard key={proj.name} className="project-card print:mb-4">
         <div className="flex justify-between mb-6 flex-wrap gap-4 print:mb-3">
           <h3 className="text-neon-blue neon-glow text-2xl print:text-black print:drop-shadow-none print:font-bold">
@@ -14,7 +15,7 @@ export const Projects = ({ data }: { data: ResumeData }) => (
           {(proj.role || proj.period) && (
             <span className="bg-neon-purple/10 border border-neon-purple text-neon-purple px-2.5 py-1 text-xs font-mono rounded-0.5 print:bg-gray-100 print:border-gray-300 print:text-gray-800">
               {proj.role}
-              {proj.role && proj.period ? " / " : ""}
+              {proj.role && proj.period ? ' / ' : ''}
               {proj.period}
             </span>
           )}
@@ -28,7 +29,7 @@ export const Projects = ({ data }: { data: ResumeData }) => (
 
         {proj.techStack && (
           <div className="flex flex-wrap gap-2 mb-6 print:mb-4">
-            {proj.techStack.map((tech) => (
+            {proj.techStack.map(tech => (
               <span
                 key={tech}
                 className="bg-neon-blue/5 border border-neon-blue/20 text-neon-blue px-2.5 py-1 text-xs font-mono rounded-0.5 print:bg-gray-100 print:border-gray-300 print:text-gray-700"
@@ -56,7 +57,7 @@ export const Projects = ({ data }: { data: ResumeData }) => (
                   key={i}
                   className="text-sm text-text-dim mb-1.5 print:text-gray-800 print:mb-1"
                 >
-                  {"> "} {h}
+                  {'> '} {h}
                 </p>
               ))}
             </div>
@@ -77,7 +78,7 @@ export const Projects = ({ data }: { data: ResumeData }) => (
                   key={i}
                   className="text-sm text-text-dim mb-1.5 print:text-gray-800 print:mb-1"
                 >
-                  {"> "} {d}
+                  {'> '} {d}
                 </p>
               ))}
             </div>
@@ -113,7 +114,7 @@ export const Projects = ({ data }: { data: ResumeData }) => (
             <div className="hidden print:flex print:flex-wrap print:gap-x-6 print:gap-y-1 print:mt-2 print:text-xs print:text-gray-600">
               {proj.github && (
                 <span>
-                  GitHub:{" "}
+                  GitHub:{' '}
                   <a href={proj.github} className="text-gray-800 underline">
                     {proj.github}
                   </a>
@@ -121,7 +122,7 @@ export const Projects = ({ data }: { data: ResumeData }) => (
               )}
               {proj.url && (
                 <span>
-                  Link:{" "}
+                  Link:{' '}
                   <a href={proj.url} className="text-gray-800 underline">
                     {proj.url}
                   </a>

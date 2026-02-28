@@ -1,8 +1,10 @@
-import { useRef } from "react";
-import { GraduationCap, Trophy } from "lucide-react";
-import { SectionHeader, GlassCard } from "./UI";
-import type { ResumeData } from "../types";
-import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useRef } from 'react';
+
+import { GraduationCap, Trophy } from 'lucide-react';
+
+import { useScrollReveal } from '../hooks/useScrollReveal';
+import type { ResumeData } from '../types';
+import { GlassCard, SectionHeader } from './UI';
 
 export const EducationAwards = ({ data }: { data: ResumeData }) => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -20,7 +22,7 @@ export const EducationAwards = ({ data }: { data: ResumeData }) => {
   });
 
   useScrollReveal(sectionRef, {
-    targets: ".gsap-card",
+    targets: '.gsap-card',
     stagger: 0.15,
     from: { y: 30, opacity: 0, scale: 0.97 },
   });
@@ -36,7 +38,7 @@ export const EducationAwards = ({ data }: { data: ResumeData }) => {
         </div>
         <div className="gsap-card">
           <GlassCard>
-            {data.education.map((edu) => (
+            {data.education.map(edu => (
               <div key={edu.school} className="mb-4 last:mb-0 print:mb-3">
                 <div className="text-neon-blue neon-glow text-lg mb-1 print:text-black print:drop-shadow-none print:font-bold">
                   {edu.school}
@@ -58,14 +60,14 @@ export const EducationAwards = ({ data }: { data: ResumeData }) => {
         </div>
         <div className="gsap-card">
           <GlassCard>
-            {data.awards.map((award) => (
+            {data.awards.map(award => (
               <div
                 key={award}
                 className="flex gap-2 text-text-dim mb-3 last:mb-0 print:text-gray-800 print:mb-2"
               >
                 <span className="text-neon-blue neon-glow print:text-gray-600 print:drop-shadow-none">
-                  {">"}
-                </span>{" "}
+                  {'>'}
+                </span>{' '}
                 {award}
               </div>
             ))}

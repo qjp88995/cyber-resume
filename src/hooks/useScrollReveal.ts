@@ -1,7 +1,8 @@
-import { type RefObject } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { type RefObject } from 'react';
+
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,23 +16,23 @@ interface ScrollRevealOptions {
 
 export function useScrollReveal(
   ref: RefObject<Element | null>,
-  options?: ScrollRevealOptions,
+  options?: ScrollRevealOptions
 ): void {
   const {
     targets,
     stagger = 0,
-    from = { y: 40, opacity: 0, filter: "blur(8px)" },
+    from = { y: 40, opacity: 0, filter: 'blur(8px)' },
     duration = 0.6,
-    ease = "expo.out",
+    ease = 'expo.out',
   } = options ?? {};
 
   useGSAP(
     () => {
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         return;
       }
 
-      if (window.matchMedia("print").matches) {
+      if (window.matchMedia('print').matches) {
         return;
       }
 
@@ -49,19 +50,19 @@ export function useScrollReveal(
         {
           y: 0,
           opacity: 1,
-          filter: "blur(0px)",
+          filter: 'blur(0px)',
           scale: 1,
           duration,
           ease,
           stagger,
           scrollTrigger: {
             trigger: ref.current,
-            start: "top 85%",
+            start: 'top 85%',
             once: true,
           },
-        },
+        }
       );
     },
-    { scope: ref, dependencies: [] }, // options 不加入 dependencies：动画只在组件挂载时初始化一次，这是故意的
+    { scope: ref, dependencies: [] } // options 不加入 dependencies：动画只在组件挂载时初始化一次，这是故意的
   );
 }
