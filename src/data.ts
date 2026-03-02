@@ -74,6 +74,35 @@ export const resumeData: ResumeData = {
   ],
   projects: [
     {
+      name: 'unfinished-symphony - AI 对话式智能作品集管理平台',
+      role: '全栈架构师 / AI 工程化',
+      period: '2026.02 - 至今',
+      description:
+        '融合 AI 对话管理与公共展示的全栈作品集平台。通过自然语言对话实现项目的智能 CRUD 管理，支持多模型接入、聊天持久化、上下文压缩及富文本渲染，并提供深浅主题切换的精美公共展示界面。',
+      techStack: [
+        'Next.js 16',
+        'React 19',
+        'Tailwind CSS v4',
+        'Prisma',
+        'SQLite',
+        'Vercel AI SDK',
+        'Tiptap 3',
+        'shadcn/ui',
+        'Docker',
+      ],
+      difficulties: [
+        'AI 工具链工程化：基于 Vercel AI SDK v6 实现 11 个 Function Calling 工具定义与执行引擎，支持项目批量操作、@mentions 上下文注入及图片粘贴自动上传，打通自然语言到数据库操作的完整链路。',
+        '流式对话与持久化：实现基于 SSE 的 AI 流式响应、SQLite 聊天记录持久化及智能上下文压缩策略（70% Token 窗口阈值自动触发），确保长对话场景下的连贯体验。',
+        '富内容渲染引擎：集成 React Markdown、KaTeX 数学公式、代码高亮、AI 思维过程可视化及工具调用追踪，构建多维度的对话展示能力。',
+        '安全与部署架构：采用 bcrypt + iron-session 加密会话体系、Next.js 16 中间件路由级鉴权，配合多阶段 Docker 构建与非 root 运行策略，实现生产级安全部署。',
+      ],
+      highlights: [],
+      url: 'https://www.qinjiapeng.cn/',
+      github: 'https://github.com/qjp88995/unfinished-symphony',
+      achievements:
+        '作为个人作品集的智能管理中枢，实现了从传统手动编辑到 AI 对话驱动的作品管理范式升级。',
+    },
+    {
       name: 'ai-model-evaluator - 企业级大模型管理与 LLM-as-a-Judge 评测矩阵',
       role: '全栈架构师 / AI 工程化',
       period: '2024.12 - 至今',
