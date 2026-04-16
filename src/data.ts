@@ -74,6 +74,39 @@ export const resumeData: ResumeData = {
   ],
   projects: [
     {
+      name: 'Agent-X - 自托管 AI Agent 发布与管理平台',
+      role: '全栈架构师 / AI 工程化',
+      period: '2026.03 - 至今',
+      description:
+        '自托管的 AI Agent 全生命周期管理平台。支持多 Provider 统一接入、MCP 工具集成、Skills 市场、in-browser 工作区 IDE 及 OpenAI 兼容 API，实现 Agent 的灵活配置、版本管理与安全发布。',
+      techStack: [
+        'NestJS 11',
+        'Prisma v7',
+        'PostgreSQL 16',
+        'React 19',
+        'Vite 6',
+        'Tailwind CSS v4',
+        'Vercel AI SDK',
+        'Monaco Editor',
+        'Zustand v5',
+        'TanStack Query v5',
+        'Docker',
+        'Turborepo',
+      ],
+      difficulties: [
+        '多 Provider 统一适配层：抹平 OpenAI、Anthropic、Gemini、DeepSeek 等 7 家厂商 API 协议差异，构建统一的 Provider 抽象与模型管理体系，支持动态接入与一键切换。',
+        'MCP 协议全链路集成：完整实现 STDIO、SSE、Streamable HTTP 三种 MCP Server 传输协议，打通 Marketplace 与自定义服务器的动态挂载与热测试能力。',
+        'AI 驱动的工作区 IDE：基于 Monaco Editor 构建 in-browser 文件编辑器，支持 50+ 语言高亮；配合 AI 工具调用实现文件的自然语言 CRUD、搜索与 Patch 操作，打通对话到文件系统的完整链路。',
+        'OpenAI 兼容 API 网关：将任意发布态 Agent 暴露为标准 /v1/chat/completions 接口，配合 API Key 鉴权体系，实现与第三方工具及自有业务的无缝对接。',
+        '安全架构设计：采用 AES-256-GCM 加密 Provider Key 密文存储与内存态安全解密；JWT 双 Token（7d/30d）机制配合刷新策略，防范全链路凭证泄露风险。',
+      ],
+      highlights: [],
+      url: 'https://agent-x.qinjiapeng.com',
+      github: 'https://github.com/qjp88995/agent-x',
+      achievements:
+        '打通从多 Provider 接入、Agent 配置发布到 OpenAI 兼容对外服务的完整工程链路，构建生产就绪的 AI Agent 基础设施平台。',
+    },
+    {
       name: 'unfinished-symphony - AI 对话式智能作品集管理平台',
       role: '全栈架构师 / AI 工程化',
       period: '2026.02 - 至今',
