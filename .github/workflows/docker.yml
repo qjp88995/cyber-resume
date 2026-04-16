@@ -33,6 +33,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/${{ github.repository }}
+          flavor: |
+            latest=false
           tags: |
             type=raw,value=staging,enable={{is_default_branch}}
             type=semver,pattern={{version}}
