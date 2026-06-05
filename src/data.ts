@@ -2,7 +2,7 @@ import type { ResumeData } from '@/types';
 
 export const resumeData: ResumeData = {
   name: '秦嘉鹏 (Jiapeng Qin)',
-  title: '资深大前端工程师 / 全栈开发',
+  title: 'AI 全栈工程师 / 大前端',
   avatar: '',
   info: {
     gender: '', // 留空隐藏
@@ -10,17 +10,17 @@ export const resumeData: ResumeData = {
     hometown: '', // 留空隐藏
     phone: '15370035363',
     email: '759848795@qq.com',
-    targetCity: '杭州',
+    targetCity: '不限 / 远程优先',
     experience: '10年研发与架构经验',
   },
   social: {
     github: 'https://github.com/qjp88995',
   },
   advantages: [
-    '核心技术栈：深耕 Web 前端生态，精通 React/Vue 体系及其底层原理，具备大型复杂系统架构经验与业务落地能力。',
-    '全栈开发能力：拥有成熟的 Node.js 及 Ruby on Rails 后端实战背景，能够独立闭环完成全链路系统设计与重构。',
-    '基础设施与工程化：熟练应用 Docker 容器化技术及 Linux 环境调优，具备编写高效 Shell 脚本及构建自动化 CI/CD 流水线的能力，深度参与企业数字化基建。',
-    '软技能与协作：极客精神驱动，具备卓越的跨团队沟通能力、抗压能力及深厚的技术沉淀，性格沉稳且极度负责。',
+    'AI 工程化：独立设计并落地多 Provider 统一适配层（OpenAI / Anthropic / Gemini / DeepSeek / Qwen / Zhipu / Moonshot 共 7 家）、MCP 全链路集成、LLM-as-a-Judge 自动化评测与 Agent 全生命周期管理，已交付 3 个生产就绪的 AI 工程项目。',
+    '现代全栈：以 React 19 / Next.js 16 / NestJS 11 / Prisma + PostgreSQL 为主力技术栈，能独立闭环从架构设计、后端服务到前端交付的全链路系统。',
+    '工程化与基建：熟练运用 Docker、Turborepo Monorepo、GitHub Actions CI/CD 及独立设计系统包，具备单元测试、可观测性（OpenTelemetry）与 Linux 环境调优能力。',
+    '自驱与协作：极客精神驱动，长期主动跟进并落地前沿技术栈，跨团队沟通顺畅、抗压、对交付高度负责。',
   ],
   education: [
     {
@@ -33,13 +33,23 @@ export const resumeData: ResumeData = {
   awards: ['荣获2022年天华优秀员工'],
   workExperience: [
     {
+      company: '独立开发 · AI 工程自主研发',
+      title: 'AI 全栈工程师（自由职业）',
+      period: '2025.05 - 至今',
+      description: [
+        'All-in AI 工程方向，独立自主研发并开源 3 个 AI 工程项目（Agent-X / unfinished-symphony / ai-model-evaluator），覆盖 AI Agent 平台、AI 对话式应用与大模型评测，作为能力证据。',
+        '独立承接 AI / 全栈技术咨询与研发项目（涉及客户保密，细节不便展示）。',
+        '持续跟进并落地 React 19 / Next.js 16 / Tailwind v4 / MCP / Vercel AI SDK 等最新技术栈。',
+      ],
+    },
+    {
       company: '南京杰游互联网服务有限公司',
       title: '前端研发工程师',
       period: '2024.12 - 2025.05',
       description: [
-        '聚焦新业务线快应用广告业务线的前端开发与基础工具链基建。',
-        '利用 Node.js + Webpack 构建了高自动化的广告接入工具集，极大降低了应用端接入成本。',
-        '开发并在官方基础上完善了快应用类型标注库及底层打包工具。',
+        '聚焦快应用广告新业务线的前端开发与基础工具链建设。',
+        '基于 Node.js + Webpack 构建广告接入工具集，降低应用端接入成本。',
+        '在官方基础上完善快应用类型标注库及底层打包工具。',
       ],
     },
     {
@@ -47,9 +57,9 @@ export const resumeData: ResumeData = {
       title: '资深全栈开发工程师',
       period: '2020.04 - 2024.04',
       description: [
-        '主导流程与信息化部门（涵盖产品、软件、硬件及数据分析业务线）的核心基建与业务系统研发。',
-        '参与企业级数字化转型建设，独立负责从前端架构设计到后端服务链路的全栈重构与闭环交付。',
-        '技术跨度全面，结合 Ruby on Rails 后端框架与 Webpack + React 前端体系，成功交付项目全生命周期管理平台、聚合工作台等多个高可用核心业务系统。',
+        '主导流程与信息化部门（涵盖产品、软件、硬件及数据分析）的核心基建与业务系统研发。',
+        '参与企业级数字化转型，独立负责从前端架构到后端服务链路的全栈重构与交付。',
+        '以 Ruby on Rails 后端 + Webpack/React 前端为主，交付项目全生命周期管理平台、聚合工作台等多个核心业务系统。',
       ],
     },
     {
@@ -57,9 +67,9 @@ export const resumeData: ResumeData = {
       title: '高级前端开发工程师',
       period: '2017.02 - 2019.12',
       description: [
-        '协同产品线负责人深度参与需求迭代，负责跨平台 Web 应用的高标准交付与长期维护。',
-        '拥有独立负责业务模块的闭环能力，涵盖数据库架构、服务端核心接口开发及前端深度联调与部署。',
-        '全面对接测试与设计部门验收流程，优化上线部署规范，确保了系统高并发环境下的稳定运行与迭代体验。',
+        '深度参与产品需求迭代，负责跨平台 Web 应用的交付与长期维护。',
+        '独立闭环业务模块，涵盖数据库设计、服务端接口开发与前端联调部署。',
+        '对接测试与设计验收流程，优化上线部署规范，保障系统稳定运行。',
       ],
     },
     {
@@ -67,8 +77,8 @@ export const resumeData: ResumeData = {
       title: '产品运营',
       period: '2016.02 - 2016.11',
       description: [
-        '独立主导公司品牌宣传矩阵与网站运营工作，建立起产品体验的数据反馈闭环体系。',
-        '进行系统化市场调研，深度统计分析运营数据输出产品优化指导方案，显著提升了后续团队研发的精准度。',
+        '主导公司品牌宣传与网站运营，建立产品体验的数据反馈闭环。',
+        '开展市场调研与运营数据分析，输出产品优化方案。',
       ],
     },
   ],
@@ -97,25 +107,26 @@ export const resumeData: ResumeData = {
         'Turborepo',
       ],
       difficulties: [
-        '多 Provider 统一适配层 + Thinking/Reasoning 跨厂商适配：抹平 OpenAI、Anthropic、Gemini、DeepSeek 等 7 家厂商 API 协议差异；各厂商推理模式配置方式完全异构（Anthropic/Moonshot 用 budgetTokens、Qwen 用 enableThinking+thinkingBudget、Gemini 用 thinkingConfig），统一封装为单一调用接口。',
+        '多 Provider 统一适配层 + Thinking/Reasoning 跨厂商适配：抹平 OpenAI、Anthropic、Gemini、DeepSeek、Qwen、Zhipu、Moonshot 共 7 家厂商 API 协议差异；各厂商推理模式配置方式完全异构（Anthropic/Moonshot 用 budgetTokens、Qwen 用 enableThinking+thinkingBudget、Gemini 用 thinkingConfig），统一封装为单一调用接口。',
         'MCP 协议全链路集成：完整实现 STDIO、SSE、Streamable HTTP 三种 MCP Server 传输协议，打通 Marketplace 与自定义服务器的动态挂载与热测试能力。',
-        'AI 驱动的工作区 IDE：基于 Monaco Editor 构建 in-browser 文件编辑器，支持 50+ 语言高亮；内置 15 个工作区工具（含 writeFiles 原子批量写入 temp-dir 策略、patchFile 局部更新、路径遍历防护），打通自然语言到文件系统操作的完整链路。',
-        'OpenAI 兼容 API 网关：将任意发布态 Agent 暴露为标准 /v1/chat/completions 接口，配合 API Key 鉴权体系，实现与第三方工具及自有业务的无缝对接。',
-        '独立设计系统包（@agent-x/design）：基于 Radix UI + CVA + Tailwind v4 抽取独立组件库，按 primitives/data/feedback/navigation/settings/layout/chat 分类，配套 Storybook，实现 UI 与业务的彻底解耦。',
+        'AI 驱动的工作区 IDE：基于 Monaco / CodeMirror 构建 in-browser 文件编辑器；内置 17 个工作区工具（含 writeFiles 原子批量写入、patchFile 局部更新、路径遍历防护），打通自然语言到文件系统操作的完整链路。',
+        'OpenAI 兼容 API 网关：将任意发布态 Agent 暴露为标准 /v1/chat/completions 接口，配合 sk-agx- 形式的 API Key 鉴权体系，实现与第三方工具及自有业务的无缝对接。',
+        '独立设计系统包（@agent-x/design）：基于 Radix UI + CVA + Tailwind v4 抽取独立组件库，按 primitives/data/feedback/navigation/settings/layout/chat/workspace 分类，配套 Storybook，实现 UI 与业务的彻底解耦。',
         '安全架构设计：采用 AES-256-GCM 加密 Provider Key 密文存储与内存态安全解密；JWT 双 Token（7d/30d）机制配合刷新策略，防范全链路凭证泄露风险。',
+        '工程化与质量保障：Turborepo Monorepo 组织 server/web/design 多包；52 个单元测试覆盖核心服务，集成 OpenTelemetry 遥测追踪与 GitHub Actions Docker 自动构建发布流水线。',
       ],
       highlights: [],
       url: 'https://agent-x.qinjiapeng.com',
       github: 'https://github.com/qjp88995/agent-x',
       achievements:
-        '打通从多 Provider 接入、Agent 配置发布到 OpenAI 兼容对外服务的完整工程链路，构建生产就绪的 AI Agent 基础设施平台。',
+        '打通从多 Provider 接入、Agent 配置发布到 OpenAI 兼容对外服务的完整工程链路；后端 24 个服务模块、前端 100+ 组件，构建生产就绪的自托管 AI Agent 基础设施。',
     },
     {
       name: 'unfinished-symphony - AI 对话式智能作品集管理平台',
       role: '全栈架构师 / AI 工程化',
       period: '2026.02 - 至今',
       description:
-        '融合 AI 对话管理与公共展示的全栈作品集平台。通过自然语言对话实现项目的智能 CRUD 管理，支持多模型接入、聊天持久化、上下文压缩及富文本渲染，并提供深浅主题切换的精美公共展示界面。',
+        '融合 AI 对话管理与公共展示的全栈作品集平台。通过自然语言对话实现项目的智能 CRUD 管理，支持多模型接入、聊天持久化、上下文压缩及富文本渲染，并提供深浅主题切换的公共展示界面。',
       techStack: [
         'Next.js 16',
         'React 19',
@@ -129,22 +140,22 @@ export const resumeData: ResumeData = {
       ],
       difficulties: [
         'AI 工具链工程化：基于 Vercel AI SDK v6 实现 11 个 Function Calling 工具定义与执行引擎，支持项目批量操作、@mentions 上下文注入及图片粘贴自动上传，打通自然语言到数据库操作的完整链路。',
-        '流式对话与持久化：实现基于 SSE 的 AI 流式响应、SQLite 聊天记录持久化及智能上下文压缩策略（70% Token 窗口阈值自动触发），确保长对话场景下的连贯体验。',
-        '富内容渲染引擎：集成 React Markdown、KaTeX 数学公式、代码高亮、AI 思维过程可视化及工具调用追踪，构建多维度的对话展示能力。',
-        '安全与部署架构：采用 bcrypt + iron-session 加密会话体系、Next.js 16 中间件路由级鉴权，配合多阶段 Docker 构建与非 root 运行策略，实现生产级安全部署。',
+        '流式对话与持久化：实现基于 SSE 的 AI 流式响应、SQLite 聊天记录持久化及智能上下文压缩策略（70% Token 窗口阈值自动触发），保障长对话场景的连贯体验。',
+        '富内容渲染引擎：集成 React Markdown、KaTeX 数学公式、代码高亮、AI 思维过程可视化及工具调用追踪，构建多维度对话展示能力。',
+        '安全与部署架构：采用 bcrypt + iron-session 加密会话体系、Next.js 16 中间件路由级鉴权，配合多阶段 Docker 构建与非 root 运行策略，实现生产级部署。',
       ],
       highlights: [],
       url: 'https://www.qinjiapeng.cn/',
       github: 'https://github.com/qjp88995/unfinished-symphony',
       achievements:
-        '作为个人作品集的智能管理中枢，实现了从传统手动编辑到 AI 对话驱动的作品管理范式升级。',
+        '作为个人作品集的智能管理中枢，实现从手动编辑到 AI 对话驱动的作品管理范式升级。',
     },
     {
-      name: 'ai-model-evaluator - 企业级大模型管理与 LLM-as-a-Judge 评测矩阵',
+      name: 'ai-model-evaluator - 大模型管理与 LLM-as-a-Judge 评测矩阵',
       role: '全栈架构师 / AI 工程化',
       period: '2024.12 - 至今',
       description:
-        '为应对大模型落地过程中的黑盒与成本管控挑战，自主研发的高度工程化评测平台。实现多路异构模型并行评测、自动化评分与密钥安全治理。',
+        '为应对大模型落地中的黑盒与成本管控挑战，自主研发的工程化评测平台。实现多路异构模型并行评测、自动化评分与密钥安全治理。',
       techStack: [
         'NestJS',
         'Prisma',
@@ -152,139 +163,66 @@ export const resumeData: ResumeData = {
         'React 18',
         'Vite',
         'SSE',
-        'AES-256-GCM',
         'Docker',
       ],
       difficulties: [
-        '基于 SSE 的异步多路并发流处理：解决 NestJS 在高吞吐分发情况下的连接状态与幂等更新难题，保证 4 路大模型并发输出时首屏延迟 < 200ms。',
-        '异构协议高阶适配与 Token 监测：采用适配器模式抹平 OpenAI、Anthropic、智谱等 10+ 厂商 API 差异，实现极低损耗的实时耗时分析与 Token 统计。',
-        'LLM-as-a-Judge 自动化度量：自建 Meta-Prompt 自动化评分引擎，将高级模型改造为“判分专家”，输出具有闭环基准的打分 (Score) 与语义反馈 (Comment)。',
-        '极致安全策略：采用 AES-256-GCM 硬件级加密方案，实现 API Key 密文存储与内存态安全解密，防范全链路泄露风险。',
+        '基于 SSE 的异步多路并发流处理：解决 NestJS 在高吞吐分发下的连接状态与幂等更新难题，支持 4 路大模型并发输出。',
+        '异构协议适配与 Token 监测：采用适配器模式抹平 OpenAI、Anthropic、智谱等 10+ 厂商 API 差异，实现低损耗的实时耗时分析与 Token 统计。',
+        'LLM-as-a-Judge 自动化度量：自建 Meta-Prompt 评分引擎，将高级模型改造为“判分专家”，输出可闭环对比的打分 (Score) 与语义反馈 (Comment)。',
+        '安全设计：采用 AES-256-GCM 加密实现 API Key 密文存储与内存态安全解密，防范全链路泄露风险。',
       ],
       highlights: [],
       url: 'https://ai-model-eval.qinjiapeng.com/',
       github: 'https://github.com/qjp88995/ai-model-evaluator',
       achievements:
-        '作为个人及团队大模型应用开发的选型基石，显著降低了异构模型接入成本，为业务侧模型微调积累了客观数据支撑。',
+        '作为个人及团队大模型选型基石，降低异构模型接入成本，为业务侧模型评估积累客观数据支撑。',
     },
     {
-      name: 'PLM - 天华项目全生命周期管理平台',
-      role: '全栈核心开发',
-      period: '2023.02 - 2024.04',
+      name: '天华企业级系统研发（RoR / React 全栈）',
+      role: '全栈核心开发 / 前端负责人',
+      period: '2020.04 - 2024.04',
       description:
-        '基于 OpenProject 二次开发的重量级企业生产力平台，集成单点登录(SSO)、多维项目管理、甘特图引擎及实时消息系统，为集团提供从立项到交付的全流程管控。',
+        '主导集团流程与信息化部门的核心业务系统研发，覆盖项目全生命周期管理、外部合作商协同与员工效能聚合三大平台。',
       techStack: [
         'Ruby on Rails',
-        'Angular',
-        'Git Architecture',
-        'Metaprogramming',
-      ],
-      difficulties: [
-        '架构解耦与溯源：分离高达 1.5GB 的超大型历史代码 Git 仓库，攻克 Ruby 弱类型语言及大量复杂元编程环境下的断点溯源与前后端重构难题。',
-        '高并发接口异步控制：针对人员创建接口的瞬时高并发调用瓶颈，独立设计基于 Promise 的异步任务调度队列，实现接口节流、自动重试与跳过容错。',
-        '业务连通性：深度本地化并打通集团协同壁垒，成功接入公司内部会议系统等外部服务；引入 exceljs 高效处理十万级人员与项目的批量导出。',
-      ],
-      highlights: [],
-      url: 'https://plm.thape.com.cn',
-      achievements:
-        '作为集团级项目管理中枢，在上海天华、深圳天华等分部全面铺开，高频支撑日常核心业务。',
-    },
-    {
-      name: 'ITH 聚合工作台',
-      role: '前端负责人',
-      period: '2022.11 - 2024.01',
-      description:
-        '一站式员工效能中心，旨在深度集成企业微信、Outlook 日历及 PLM 生产数据，打造数字化办公统一入口。',
-      techStack: [
         'React',
-        'Antd',
-        'Tailwind',
-        'SSE (Server-Sent Events)',
-        'Go',
-      ],
-      difficulties: [
-        '复杂协议与数据清洗：攻坚企业级日历协议（Exchange/WeCom）的复杂对接体系，并针对数据字段差异，研发日程与会议智能分类算法。',
-        '高频实时通信：引入 SSE 服务端实时推送技术，实现高频消息与日历更新的大盘毫秒级推送。',
-        '前端精算引擎：攻克浏览器端复杂报表渲染瓶颈，独立完成 Web 端项目利润精算模型计算引擎与数据导出组件。',
-      ],
-      highlights: [],
-      url: 'https://ith-workspace.thape.com.cn/',
-      achievements:
-        '项目通过域控策略作为全集团桌面端的默认主页强制装配，服务数千名专业设计及管理人员。',
-    },
-    {
-      name: 'TH-Facade 住宅立面资源库',
-      role: '前端架构设计',
-      period: '2022.02 - 2023.12',
-      description:
-        '企业级设计资产云平台，承载数万件渲染图、SU 模型及材料贴图等核心设计资源。',
-      techStack: ['Webpack 5', 'React 18', 'Antd', 'Tailwind CSS'],
-      difficulties: [
-        '大颗粒度资产流转：针对海量高清图片与模型文件的瀑布流加载性能调优，并重构了一套高度可复用的业务组件库。',
-        '交互体验重塑：深度定制 Antd 的 Image 预览组件，封堵了原版资产的非法下载漏洞，并实现了基于资产池的多维平滑滚动体验。',
-      ],
-      highlights: [],
-      url: 'https://th-facade.thape.com.cn/',
-      achievements:
-        '极大提升了内部几十个业务组海量设计资产的检索效率及确权流转速度。',
-    },
-    {
-      name: '基于 Headless Browser 的协同平台管理系统',
-      role: '全栈架构师',
-      period: '2021.05 - 2024.04',
-      description:
-        '管理 2 万+ 外部合作商的大型协同打件系统，负责超 1.5TB 设计成果的安全归档审计与流转。',
-      techStack: [
-        'Ruby on Rails',
-        'Webpack',
-        'Turbo',
-        'CoreUI',
+        'Angular',
         'MySQL',
         'Redis',
         'Headless Browser',
+        'SSE',
       ],
       difficulties: [
-        '海量资产存储基建：面对 1.5T 级的大规模图纸与附件，自研前端分片上传、断点续传与 MD5 指纹校验重传机制，避免核心网络拥堵。',
-        '复杂业务流抽象：从 0 到 1 设计并实现基于多角色（分包/内部/组长）流转的大型权限控制树与审批引擎。',
-        '性能治理与技术侧写：引入 Redis 两小时缓存策略降低 SSO 身份数据高频获取损耗；利用 Node.js Headless Browser 实现前台无感知的画图反馈截图机制。',
+        'PLM 项目全生命周期管理平台：基于 OpenProject 二次开发，分离 1.5GB 超大型历史 Git 仓库，攻克 Ruby 弱类型与大量元编程下的重构难题；设计基于 Promise 的异步任务调度队列解决人员创建接口高并发瓶颈；用 exceljs 处理十万级人员与项目批量导出，在上海、深圳等分部全面铺开。',
+        '协同打件平台：管理 2 万+ 外部合作商、超 1.5TB 设计成果的归档审计与流转。自研前端分片上传、断点续传与 MD5 指纹校验重传；从 0 到 1 设计多角色（分包/内部/组长）权限控制树与审批引擎；用 Headless Browser 实现无感知画图反馈截图，累计处理成果文件 15000+。',
+        'ITH 聚合工作台：集成企业微信、Outlook 日历与 PLM 生产数据的数字化办公入口，对接 Exchange/WeCom 日历协议并研发日程智能分类；引入 SSE 实现高频消息实时推送；通过域控策略作为全集团默认主页，服务数千名设计与管理人员。',
       ],
       highlights: [],
-      url: 'https://cooperation.thape.com.cn/',
       achievements:
-        '支撑全集团外部合作方的标准化作业生命周期，累计处理成果文件 15000+。',
+        '支撑集团从立项、协同到日常办公的核心业务链路，多套系统作为集团级基础设施长期高频运行。',
     },
     {
-      name: '线上生态展厅引擎 (基于 SolidJS 等新型轻量框架)',
-      role: '全栈研发',
-      period: '2021.11 - 2022.04',
-      description:
-        '建筑委核心诉求开发的移动端扫码展示引擎，服务于天华展厅导览及展品流转。',
-      techStack: ['SolidJS', 'NestJS', 'MySQL', 'React', 'Tailwind CSS'],
+      name: '天华前端资产平台与工具链',
+      role: '前端架构 / 全栈研发',
+      period: '2021.05 - 2024.01',
+      description: '围绕设计资产管理与内部生态搭建的多个前端平台与工具链。',
+      techStack: [
+        'React',
+        'SolidJS',
+        'NestJS',
+        'Webpack 5',
+        'Ruby on Rails',
+        'Ruby C-API',
+      ],
       difficulties: [
-        '框架演进：首次使用无虚拟 DOM 的新型极速框架 SolidJS 构建移动端引擎，追求极致的首屏渲染性能。',
-        '多端设备播放策略：破解微信/特种设备等多端浏览器的视频自动播放限制环境，交付高可用媒体触发展略。',
-        '后台灵活调度：提供基于数据强绑定的坐标定位机制、前台轮播图惯性拖拽以及后台列表的复杂拖拽排序调度。',
+        'TH-Facade 住宅立面资源库：承载数万件渲染图、SU 模型与材料贴图的设计资产云平台，针对海量高清图片做瀑布流加载性能调优并重构可复用业务组件库。',
+        '线上生态展厅引擎：首次以无虚拟 DOM 的 SolidJS 构建移动端扫码导览引擎，破解微信/特种设备多端视频自动播放限制，作为大型会展电子导览基础设施落地。',
+        '内部生态系统：基于 Java + Vue 的天问内网全文搜索（十万级数据流式同步）与基于 RoR 二次重构的甜酸内部论坛（打通域单点登录、阅后即焚/匿名特性），低成本承接腾讯乐享下线后的内部讨论场景。',
+        'SketchUp 插件与工具拓展：运用 Ruby C-API 开发 SU 模型内批量导出立体材料的插件，优化数万级图元轮询性能；另开发联审平台短信转发安卓集线器（心跳检测/防误触/电量侦测），解决资质账号换绑难题。',
       ],
       highlights: [],
-      url: 'https://thec.thape.com.cn/',
       achievements:
-        '成功作为大型会展及公共空间的电子导览基础设施，交互平滑，获得广泛好评。',
-    },
-    {
-      name: '内部生态系统集成与维护：天问内网聚合搜 & 甜酸内部论坛',
-      description:
-        '系统涵盖：天问（基于 Java+Vue 的内部全文搜索引擎）+ 甜酸论坛（基于 RoR 高度定制的类 V2EX 交流区）',
-      difficulties: [
-        '搜索生态并轨：获取并理顺了内部供应商提供的重量级自研全文搜索数据库协议，实现了集团“官网”与“住宅产品库”十万级数据的流式同步对接。',
-        '社区生态重塑：利用 Ruby on Rails 在开源 Homeland 基础上二次重构甜酸论坛，打通企业域单点登录并开发阅后即焚/匿名流转等特性，低成本接盘腾讯乐享下线后的内部讨论土壤。',
-      ],
-    },
-    {
-      name: '特定工具链及硬件周边拓展开发',
-      difficulties: [
-        'Sketchup (SU) 插件 - 立面材料手册：运用 Ruby C-API 横向拓展至客户端，完成直接在 SU 模型内批量导出立体材料的插件研发。主攻底层数据爬查性能，大幅优化点线面在数万级图元轮询时的卡死痛点。',
-        '联审平台短信转发安卓端集线器：为解决企业公共事务账号接收联审码问题，主刀开发 Android 硬件级短信拦截与转发闭环，加入高可靠心跳检测、防误触守护与电量侦测引擎，平稳化解了资质账号换绑难的管理成本。',
-      ],
+        '提升内部数十个业务组的设计资产检索与流转效率，并补齐多处内部工具与生态空白。',
     },
   ],
 };
