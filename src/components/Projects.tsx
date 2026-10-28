@@ -1,4 +1,11 @@
-import { Cpu, ExternalLink, Layers, ShieldCheck } from 'lucide-react';
+import {
+  Cpu,
+  ExternalLink,
+  KeyRound,
+  Layers,
+  Lock,
+  ShieldCheck,
+} from 'lucide-react';
 
 import { GlassCard, SectionHeader } from '@/components/UI';
 import type { ResumeData } from '@/types';
@@ -96,7 +103,15 @@ export const Projects = ({ data }: { data: ResumeData }) => (
                   rel="noreferrer"
                   className="text-neon-blue no-underline font-mono text-sm inline-flex items-center gap-2 border border-neon-blue px-4 py-2 transition-all duration-300 hover:bg-neon-blue hover:text-bg-dark hover:shadow-neon-blue-link"
                 >
-                  <ExternalLink size={16} /> GITHUB
+                  {proj.githubPrivate ? (
+                    <>
+                      <Lock size={16} /> GITHUB · PRIVATE
+                    </>
+                  ) : (
+                    <>
+                      <ExternalLink size={16} /> GITHUB
+                    </>
+                  )}
                 </a>
               )}
               {proj.url && (
@@ -109,12 +124,18 @@ export const Projects = ({ data }: { data: ResumeData }) => (
                   <ExternalLink size={16} /> LIVE
                 </a>
               )}
+              {proj.preview && (
+                <span className="text-text-dim font-mono text-sm inline-flex items-center gap-2 border border-neon-purple/50 px-4 py-2">
+                  <KeyRound size={16} className="text-neon-purple" />
+                  预览账号 {proj.preview.username} / {proj.preview.password}
+                </span>
+              )}
             </div>
             {/* 打印：文字链接 */}
             <div className="hidden print:flex print:flex-wrap print:gap-x-6 print:gap-y-1 print:mt-2 print:text-xs print:text-gray-600">
               {proj.github && (
                 <span>
-                  GitHub:{' '}
+                  GitHub{proj.githubPrivate ? '（私有）' : ''}:{' '}
                   <a href={proj.github} className="text-gray-800 underline">
                     {proj.github}
                   </a>
@@ -126,6 +147,11 @@ export const Projects = ({ data }: { data: ResumeData }) => (
                   <a href={proj.url} className="text-gray-800 underline">
                     {proj.url}
                   </a>
+                </span>
+              )}
+              {proj.preview && (
+                <span>
+                  预览账号: {proj.preview.username} / {proj.preview.password}
                 </span>
               )}
             </div>

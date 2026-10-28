@@ -37,6 +37,8 @@ export interface ResumeData {
     highlights?: string[];
     url?: string;
     github?: string;
+    githubPrivate?: boolean;
+    preview?: { username: string; password: string };
     achievements?: string;
   }[];
   awards: string[];
